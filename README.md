@@ -50,6 +50,34 @@ environment during active lab testing.
 > Note: Agent connectivity and alert counts reflect
 > the environment at the time of capture.
 
+## Multi-Endpoint Monitoring
+
+This ongoing SOC lab includes Wazuh agents deployed
+across Windows and Linux endpoints, enabling
+centralized security monitoring.
+
+![Wazuh Agent Monitoring](screenshots/02-wazuh-connected-agents.png)
+
+### Registered Endpoints
+
+| Endpoint | Operating System | Status at Capture |
+|---|---|---|
+| Windows11-Lab | Windows 11 | Active |
+| Kali-Lab | Kali Linux | Active |
+| WIN11-ACER-LAB02 | Windows 11 | Disconnected |
+
+### Monitoring Capabilities
+
+- Centralized Windows and Linux security telemetry
+- Wazuh agent deployment and management
+- Endpoint connection and health monitoring
+- Security alert collection and investigation
+
+**Project Status:** Ongoing development and testing.
+
+> Agent statuses reflect the environment at
+> the time of capture.
+
 ## Implemented Capabilities
 
 - Wazuh Manager, Indexer, and Dashboard deployment
