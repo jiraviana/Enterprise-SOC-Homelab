@@ -1,5 +1,9 @@
 # Enterprise SOC Home Lab | Wazuh SIEM
 
+**Project Status: 🚧 Ongoing Development | Active Build & Testing**
+
+> This is an ongoing cybersecurity engineering project. Features, integrations, detection rules, attack simulations, and documentation are continuously being developed, tested, and improved. Completed implementations are documented with validation evidence, while upcoming capabilities are tracked in the project roadmap.
+
 ### Security Monitoring • Detection Engineering • Threat Hunting • Incident Response
 
 A hands-on, enterprise-style Security Operations Center (SOC) home lab designed to simulate real-world security monitoring, threat detection, incident investigation, and response workflows.
