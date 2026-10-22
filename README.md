@@ -130,3 +130,39 @@ This repository will contain architecture diagrams, configuration examples, dete
 ## Disclaimer
 
 This project is developed for educational, defensive security research, and professional portfolio purposes. All testing is performed in an authorized home lab environment. Sensitive credentials, private keys, and confidential information are excluded from this repository.
+
+## Custom Detection Engineering
+
+As part of my ongoing Wazuh SOC Home Lab, I develop, test, and validate custom detection rules to identify suspicious endpoint activity and map relevant behaviors to the MITRE ATT&CK framework.
+
+### Detection Case Study 01 — Microsoft Defender Tampering
+
+| Field | Details |
+|---|---|
+| MITRE ATT&CK | T1562.001 — Impair Defenses: Disable or Modify Tools |
+| Wazuh Rule ID | 100109 |
+| Alert Severity | Level 12 |
+| Windows Event ID | 4104 — PowerShell Script Block Logging |
+| Endpoint | Windows11-Lab |
+| Validation Method | Controlled PowerShell command-pattern test |
+| Detection Status | Validated — Further testing ongoing |
+
+### Detection Evidence
+
+![Microsoft Defender Tampering Detection](screenshots/MITRE-T1562.001-Defender-Tampering-Detection.png.jpeg)
+
+### Investigation Summary
+
+A custom Wazuh detection rule identified a PowerShell script-block pattern associated with attempts to disable Microsoft Defender real-time protection.
+
+The controlled test successfully generated a Level 12 security alert mapped to MITRE ATT&CK T1562.001. The validation confirms that the detection identified the suspicious command pattern; it does not establish that Microsoft Defender was actually disabled.
+
+### Detailed Detection Engineering Documentation
+
+**[View Full MITRE T1562.001 Detection Case Study](detection-rules/T1562.001-Defender-Impairment.md)**
+
+### Ongoing Detection Engineering
+
+Additional custom detection rules, MITRE ATT&CK simulations, correlation logic, and investigation evidence will be documented as development and testing progress.
+
+> **Project Status:** Ongoing Development | Active Build & Testing
