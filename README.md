@@ -10,14 +10,16 @@
 |---|---|
 | [Project Objectives](#project-objectives) | Purpose and goals of the SOC lab |
 | [Lab Environment](#lab-environment) | Infrastructure and technologies used |
-| [Wazuh SIEM Dashboard](#wazuh-siem-dashboard) | SIEM deployment evidence |
+| [Wazuh SIEM Dashboard](#wazuh-siem-dashboard) | SIEM deployment and monitoring evidence |
 | [Multi-Endpoint Monitoring](#multi-endpoint-monitoring) | Windows and Linux endpoint monitoring |
-| [Custom Detection Engineering](#custom-detection-engineering) | Validated detection rules and evidence |
-| [MITRE ATT&CK Simulations](attack-simulations/README.md) | Controlled testing and simulation tracking |
+| [Implemented Capabilities](#implemented-capabilities) | Configured SOC monitoring and detection features |
+| [Custom Detection Engineering](#custom-detection-engineering) | Custom Wazuh rules and validated detection evidence |
+| [MITRE ATT&CK Simulations](attack-simulations/README.md) | Controlled attack simulation documentation |
 | [Detection Case Study — T1562.001](detection-rules/T1562.001-Defender-Impairment.md) | Microsoft Defender command-pattern detection |
 | [Project Roadmap](#project-roadmap--development-progress) | Completed, ongoing, and planned work |
-| [Screenshots and Evidence](screenshots/README.md) | Supporting lab screenshots |
-| [Lab Architecture](architecture/README.md) | Infrastructure documentation |
+| [Project Documentation](#project-documentation) | Technical documentation and supporting resources |
+| [Screenshots and Evidence](screenshots/) | Lab screenshots and detection evidence |
+| [Lab Architecture](architecture/) | Infrastructure documentation under development |
 
 ### Security Monitoring • Detection Engineering • Threat Hunting • Incident Response
 
@@ -105,6 +107,42 @@ centralized security monitoring.
 - Custom Wazuh detection rules
 - MITRE ATT&CK-aligned detection testing
 
+## Custom Detection Engineering
+
+As part of my ongoing Wazuh SOC Home Lab, I develop, test, and validate custom detection rules to identify suspicious endpoint activity and map relevant behaviors to the MITRE ATT&CK framework.
+
+### Detection Case Study 01 — Microsoft Defender Tampering
+
+| Field | Details |
+|---|---|
+| MITRE ATT&CK | T1562.001 — Impair Defenses: Disable or Modify Tools |
+| Wazuh Rule ID | 100109 |
+| Alert Severity | Level 12 |
+| Windows Event ID | 4104 — PowerShell Script Block Logging |
+| Endpoint | Windows11-Lab |
+| Validation Method | Controlled PowerShell command-pattern test |
+| Detection Status | Validated — Further testing ongoing |
+
+### Detection Evidence
+
+![Microsoft Defender Tampering Detection](screenshots/MITRE-T1562.001-Defender-Tampering-Detection.png.jpeg)
+
+### Investigation Summary
+
+A custom Wazuh detection rule identified a PowerShell script-block pattern associated with attempts to disable Microsoft Defender real-time protection.
+
+The controlled test successfully generated a Level 12 security alert mapped to MITRE ATT&CK T1562.001. The validation confirms that the detection identified the suspicious command pattern; it does not establish that Microsoft Defender was actually disabled.
+
+### Detailed Detection Engineering Documentation
+
+**[View Full MITRE T1562.001 Detection Case Study](detection-rules/T1562.001-Defender-Impairment.md)**
+
+### Ongoing Detection Engineering
+
+Additional custom detection rules, MITRE ATT&CK simulations, correlation logic, and investigation evidence will be documented as development and testing progress.
+
+> **Project Status:** Ongoing Development | Active Build & Testing
+
 ## Project Roadmap & Development Progress
 
 **Project Status:** 🚧 Ongoing Development | Active Build & Testing
@@ -160,39 +198,3 @@ This repository will contain architecture diagrams, configuration examples, dete
 ## Disclaimer
 
 This project is developed for educational, defensive security research, and professional portfolio purposes. All testing is performed in an authorized home lab environment. Sensitive credentials, private keys, and confidential information are excluded from this repository.
-
-## Custom Detection Engineering
-
-As part of my ongoing Wazuh SOC Home Lab, I develop, test, and validate custom detection rules to identify suspicious endpoint activity and map relevant behaviors to the MITRE ATT&CK framework.
-
-### Detection Case Study 01 — Microsoft Defender Tampering
-
-| Field | Details |
-|---|---|
-| MITRE ATT&CK | T1562.001 — Impair Defenses: Disable or Modify Tools |
-| Wazuh Rule ID | 100109 |
-| Alert Severity | Level 12 |
-| Windows Event ID | 4104 — PowerShell Script Block Logging |
-| Endpoint | Windows11-Lab |
-| Validation Method | Controlled PowerShell command-pattern test |
-| Detection Status | Validated — Further testing ongoing |
-
-### Detection Evidence
-
-![Microsoft Defender Tampering Detection](screenshots/MITRE-T1562.001-Defender-Tampering-Detection.png.jpeg)
-
-### Investigation Summary
-
-A custom Wazuh detection rule identified a PowerShell script-block pattern associated with attempts to disable Microsoft Defender real-time protection.
-
-The controlled test successfully generated a Level 12 security alert mapped to MITRE ATT&CK T1562.001. The validation confirms that the detection identified the suspicious command pattern; it does not establish that Microsoft Defender was actually disabled.
-
-### Detailed Detection Engineering Documentation
-
-**[View Full MITRE T1562.001 Detection Case Study](detection-rules/T1562.001-Defender-Impairment.md)**
-
-### Ongoing Detection Engineering
-
-Additional custom detection rules, MITRE ATT&CK simulations, correlation logic, and investigation evidence will be documented as development and testing progress.
-
-> **Project Status:** Ongoing Development | Active Build & Testing
