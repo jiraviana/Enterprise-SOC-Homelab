@@ -62,11 +62,6 @@ environment during active lab testing.
 - Security alerts across multiple severity levels
 - Ongoing endpoint monitoring and detection testing
 
-**Project Status:** Ongoing development and testing.
-
-> Note: Agent connectivity and alert counts reflect
-> the environment at the time of capture.
-
 ## Multi-Endpoint Monitoring
 
 This ongoing SOC lab includes Wazuh agents deployed
@@ -89,11 +84,6 @@ centralized security monitoring.
 - Wazuh agent deployment and management
 - Endpoint connection and health monitoring
 - Security alert collection and investigation
-
-**Project Status:** Ongoing development and testing.
-
-> Agent statuses reflect the environment at
-> the time of capture.
 
 ## Implemented Capabilities
 
@@ -140,8 +130,6 @@ The controlled test successfully generated a Level 12 security alert mapped to M
 ### Ongoing Detection Engineering
 
 Additional custom detection rules, MITRE ATT&CK simulations, correlation logic, and investigation evidence will be documented as development and testing progress.
-
-> **Project Status:** Ongoing Development | Active Build & Testing
 
 ## Project Roadmap & Development Progress
 
