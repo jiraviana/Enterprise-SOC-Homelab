@@ -1,7 +1,7 @@
 
 # MITRE ATT&CK T1057 — Process Discovery
 
-**Detection Status:** Alert Generation and Rule Definition Validated | Source Event ID Pending Verification
+**Detection Status:** Alert Generation and Rule Logic Validated
 
 ## 1. Overview
 
@@ -124,6 +124,10 @@ Wazuh Threat Hunting displayed PowerShell process discovery alerts from the `Win
 | Detection Date | October 19, 2026 |
 | Dashboard Search Results | 20 matching alert records |
 | Validation Status | Alert Generation Validated |
+| Windows Event ID | 4104 — PowerShell Script Block Logging |
+| Rule Severity | Level 4 |
+| Rule Type | Built-in Wazuh PowerShell rule |
+| Rule Chain | 91801 → 91802 → 91815 |
 
 ### Observed PowerShell Commands
 
@@ -153,16 +157,13 @@ The evidence supports detection of the observed commands and centralized visibil
 
 ### Validation Limitations
 
-The underlying rule definition, configured severity, and MITRE ATT&CK mapping have been verified.
+The Windows Event ID, rule configuration, severity, parent rule chain, and MITRE ATT&CK mapping have been verified.
 
-The following items remain for additional validation:
+The available evidence confirms that Wazuh generated alerts for PowerShell process discovery commands. However, a separately documented repeatability test has not yet been completed.
 
-- Confirm the source Windows Event ID from an expanded Wazuh alert.
-- Review parent rule `91802` to document the complete matching conditions.
-- Perform a separately documented controlled test to assess detection reproducibility.
-- Evaluate potential false positives caused by legitimate PowerShell administration.
+Because `Get-Process` is also used during legitimate system administration, the detection requires additional context to distinguish authorized activity from suspicious reconnaissance.
 
-The observed commands do not independently establish malicious activity or successful compromise.
+The alerts do not independently establish malicious intent or successful compromise.
 
 ## 7. Future Improvements
 
@@ -175,6 +176,8 @@ The observed commands do not independently establish malicious activity or succe
 
 ## Conclusion
 
-This case study demonstrates Wazuh SIEM visibility into PowerShell-based process discovery activity on a monitored Windows endpoint.
+This case study demonstrates the detection and investigation of PowerShell-based process discovery activity using Wazuh SIEM.
 
-Alert generation and MITRE ATT&CK T1057 mapping were confirmed through the collected evidence. Further rule-level verification and controlled testing will strengthen the detection engineering assessment.
+Windows Event ID `4104`, built-in Wazuh Rule `91815`, Level 4 severity, the parent rule chain, and MITRE ATT&CK T1057 mapping were verified.
+
+The observed evidence validates alert generation and the configured detection logic. Additional controlled testing and contextual correlation can further improve detection reliability and investigation accuracy.
