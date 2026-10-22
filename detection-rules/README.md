@@ -24,7 +24,6 @@ Detection: PowerShell command pattern associated with disabling Microsoft Defend
 
 Status: Tested in lab environment.
 
-
 ## Custom Detection Inventory
 
 The following custom Wazuh detection rules have generated alerts in my SOC home lab. Additional validation and investigation documentation is ongoing.
@@ -38,8 +37,7 @@ The following custom Wazuh detection rules have generated alerts in my SOC home 
 | 100107 | T1053.005 | Scheduled Task Persistence | Documented — Alert Observed |
 | 100108 | T1547.001 | Registry Run Key Persistence | Documented — Alert Generation Validated |
 | 100109 | T1562.001 | Microsoft Defender Tampering Command Pattern | Documented |
-| T1057 | Process Discovery | PowerShell process enumeration monitoring | Alert evidence captured; rule validation pending | [View Case Study](T1057-Process-Discovery.md) |
-
+| 91815 | [T1057](T1057-Process-Discovery.md) | PowerShell Process Discovery (Built-in Wazuh Rule) | Documented — Alert Generation and Rule Logic Validated |
 
 ### Published Detection Case Studies
 
