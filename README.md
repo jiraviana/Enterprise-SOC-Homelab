@@ -193,7 +193,18 @@ This roadmap is updated as each capability is configured, tested, and validated.
 
 ## Project Documentation
 
-This repository will contain architecture diagrams, configuration examples, detection rules, screenshots, attack simulation procedures, investigation reports, and lessons learned as the project develops.
+This repository contains technical documentation,
+detection engineering case studies, MITRE ATT&CK
+simulation records, and security monitoring evidence.
+
+Additional architecture diagrams, configuration
+examples, investigation reports, and response
+workflows will be added as development progresses.
+
+- [Detection Engineering](detection-rules/)
+- [MITRE ATT&CK Simulations](attack-simulations/)
+- [Screenshots and Evidence](screenshots/)
+- [Lab Architecture — In Development](architecture/)
 
 ## Disclaimer
 
