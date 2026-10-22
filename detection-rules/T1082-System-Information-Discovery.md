@@ -48,9 +48,20 @@ A matching event generates a Level 8 alert associated with MITRE ATT&CK T1082.
 
 ## Detection Evidence
 
-A Wazuh alert matching rule 100103 was observed during lab testing.
+The following screenshot shows the custom Wazuh detection rule identifying execution of `systeminfo.exe` through Sysmon process creation telemetry.
 
-The detection demonstrates visibility into process execution through Sysmon telemetry.
+![MITRE ATT&CK T1082 - System Information Discovery Detection](../screenshots/MITRE-T1082-Custom-Wazuh-Detection.jpeg)
+
+### Observed Alert Details
+
+| Field | Observed Value |
+|---|---|
+| Wazuh Rule ID | 100103 |
+| Alert Level | 8 |
+| MITRE ATT&CK | T1082 |
+| Windows Event ID | 1 |
+| Process | systeminfo.exe |
+| Detection Result | Matching alert generated |
 
 ## SOC Investigation Approach
 
