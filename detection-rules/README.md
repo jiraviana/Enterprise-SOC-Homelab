@@ -31,7 +31,7 @@ The following custom Wazuh detection rules have generated alerts in my SOC home 
 
 | Rule ID | MITRE ATT&CK | Detection Use Case | Status |
 |---|---|---|---|
-| 100102 | T1110 | Multiple Failed Authentication Attempts | Alert Observed |
+| 100102 | T1110 | Multiple Failed Authentication Attempts | Documented — Correlation Validated |
 | 100103 | T1082 | System Information Discovery | Documented |
 | 100104 | T1016 | Network Configuration Discovery | Documented — Current Rule Validation Pending |
 | 100106 | T1105 | Ingress Tool Transfer | Alert Observed |
@@ -44,6 +44,7 @@ The following custom Wazuh detection rules have generated alerts in my SOC home 
 - [T1562.001 — Microsoft Defender Impairment Detection](T1562.001-Defender-Impairment.md)
 - [T1082 — System Information Discovery Detection](T1082-System-Information-Discovery.md)
 - [T1016 — System Network Configuration Discovery](T1016-Network-Configuration-Discovery.md)
+- [T1110 — Brute Force Detection and Event Correlation](T1110-Brute-Force-Detection.md)
 
 ### Detection Documentation Approach
 
