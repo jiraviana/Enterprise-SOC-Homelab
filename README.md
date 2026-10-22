@@ -20,6 +20,8 @@
 | [Project Documentation](#project-documentation) | Technical documentation and supporting resources |
 | [Screenshots and Evidence](screenshots/) | Lab screenshots and detection evidence |
 | [SOC Lab Architecture](#soc-lab-architecture) | Lab architecture diagram and infrastructure documentation |
+| [Security Monitoring and Integrations](security-monitoring/README.md) | Windows Event Logs, Sysmon, Defender, FIM, VirusTotal, and Wazuh service evidence |
+
 
 ### Security Monitoring • Detection Engineering • Threat Hunting • Incident Response
 
@@ -232,6 +234,8 @@ workflows will be added as development progresses.
 - [MITRE ATT&CK Simulations](attack-simulations/)
 - [Screenshots and Evidence](screenshots/)
 - [SOC Lab Architecture Documentation](architecture/README.md)
+- [Security Monitoring and Integrations](security-monitoring/README.md)
+
   
 ## Disclaimer
 
