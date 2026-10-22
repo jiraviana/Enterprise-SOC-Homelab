@@ -14,7 +14,7 @@
 | [Multi-Endpoint Monitoring](#multi-endpoint-monitoring) | Windows and Linux endpoint monitoring |
 | [Implemented Capabilities](#implemented-capabilities) | Configured SOC monitoring and detection features |
 | [Custom Detection Engineering](#custom-detection-engineering) | Custom Wazuh rules and validated detection evidence |
-| [MITRE ATT&CK Simulations](attack-simulations/README.md) | Controlled attack simulation documentation |
+| [MITRE ATT&CK Detection Portfolio](#mitre-attck-detection-engineering-portfolio) | Seven custom Wazuh detection case studies and validation results |
 | [Detection Case Study — T1562.001](detection-rules/T1562.001-Defender-Impairment.md) | Microsoft Defender command-pattern detection |
 | [Project Roadmap](#project-roadmap--development-progress) | Completed, ongoing, and planned work |
 | [Project Documentation](#project-documentation) | Technical documentation and supporting resources |
@@ -231,8 +231,8 @@ workflows will be added as development progresses.
 - [Detection Engineering](detection-rules/)
 - [MITRE ATT&CK Simulations](attack-simulations/)
 - [Screenshots and Evidence](screenshots/)
-- [Lab Architecture — In Development](architecture/)
-
+- [SOC Lab Architecture Documentation](architecture/README.md)
+  
 ## Disclaimer
 
 This project is developed for educational, defensive security research, and professional portfolio purposes. All testing is performed in an authorized home lab environment. Sensitive credentials, private keys, and confidential information are excluded from this repository.
