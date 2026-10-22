@@ -15,7 +15,7 @@
 | [Custom Detection Engineering](#custom-detection-engineering) | Validated detection rules and evidence |
 | [MITRE ATT&CK Simulations](attack-simulations/README.md) | Controlled testing and simulation tracking |
 | [Detection Case Study — T1562.001](detection-rules/T1562.001-Defender-Impairment.md) | Microsoft Defender command-pattern detection |
-| [Project Roadmap](#project-roadmap) | Completed, ongoing, and planned work |
+| [Project Roadmap](#project-roadmap--development-progress) | Completed, ongoing, and planned work |
 | [Screenshots and Evidence](screenshots/README.md) | Supporting lab screenshots |
 | [Lab Architecture](architecture/README.md) | Infrastructure documentation |
 
@@ -123,20 +123,53 @@ Custom Wazuh rules are being developed and tested to identify suspicious endpoin
 
 The custom detection was validated using a controlled test string in the lab environment.
 
-## Project Roadmap
+## Project Roadmap & Development Progress
 
-Planned improvements include:
+**Project Status:** 🚧 Ongoing Development | Active Build & Testing
 
-- Sysmon deployment and integration
-- Enhanced PowerShell logging
-- Advanced event correlation
-- Suricata network intrusion detection
-- Additional MITRE ATT&CK simulations
-- Threat hunting case studies
-- Wazuh Active Response
-- Vulnerability detection and management
-- Dedicated Windows target virtual machine
-- Active Directory lab environment
+This project is continuously evolving into an enterprise-style SOC environment. The roadmap below tracks implemented capabilities, current engineering work, and planned integrations.
+
+### Completed & Validated
+
+- [x] Deploy Wazuh SIEM 4.14.8 on Ubuntu Server 24.04 LTS
+- [x] Configure Wazuh Manager, Indexer, and Dashboard
+- [x] Deploy Windows 11 and Kali Linux Wazuh agents
+- [x] Configure Windows Security Event Log collection
+- [x] Implement File Integrity Monitoring (FIM)
+- [x] Integrate VirusTotal threat intelligence
+- [x] Collect Microsoft Defender security telemetry
+- [x] Validate EICAR antivirus test detection
+- [x] Develop and validate a custom Wazuh detection for MITRE ATT&CK T1562.001
+- [x] Document the first controlled detection test and alert evidence
+
+### In Progress
+
+- [ ] Expand and validate additional custom Wazuh detection rules
+- [ ] Develop additional MITRE ATT&CK-aligned test scenarios
+- [ ] Improve detection documentation and evidence collection
+
+### Planned — Security Telemetry & Detection
+
+- [ ] Deploy and configure Sysmon
+- [ ] Enhance PowerShell logging and detection coverage
+- [ ] Develop multi-event correlation rules
+- [ ] Integrate Suricata network intrusion detection
+- [ ] Perform structured threat hunting exercises
+
+### Planned — Incident Response & Infrastructure
+
+- [ ] Implement and test Wazuh Active Response
+- [ ] Expand vulnerability detection and management workflows
+- [ ] Deploy a dedicated Windows target virtual machine
+- [ ] Build an Active Directory test environment
+- [ ] Simulate and investigate additional endpoint and identity-based attack scenarios
+- [ ] Create end-to-end incident investigation and response case studies
+
+### Continuous Improvement
+
+This roadmap is updated as each capability is configured, tested, and validated. Features are only marked complete after implementation and verification.
+
+> **Portfolio Note:** This is an independent, hands-on cybersecurity engineering project conducted in an authorized home lab. It is not presented as a completed production SOC deployment.
 
 ## Project Documentation
 
