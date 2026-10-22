@@ -33,7 +33,7 @@ The following custom Wazuh detection rules have generated alerts in my SOC home 
 |---|---|---|---|
 | 100102 | T1110 | Multiple Failed Authentication Attempts | Alert Observed |
 | 100103 | T1082 | System Information Discovery | Documented |
-| 100104 | T1016 | Network Configuration Discovery | Alert Observed |
+| 100104 | T1016 | Network Configuration Discovery | Documented — Current Rule Validation Pending |
 | 100106 | T1105 | Ingress Tool Transfer | Alert Observed |
 | 100107 | T1053.005 | Scheduled Task Persistence | Alert Observed |
 | 100108 | T1547.001 | Registry Run Key Persistence | Alert Observed |
@@ -43,6 +43,7 @@ The following custom Wazuh detection rules have generated alerts in my SOC home 
 
 - [T1562.001 — Microsoft Defender Impairment Detection](T1562.001-Defender-Impairment.md)
 - [T1082 — System Information Discovery Detection](T1082-System-Information-Discovery.md)
+- [T1016 — System Network Configuration Discovery](T1016-Network-Configuration-Discovery.md)
 
 ### Detection Documentation Approach
 
