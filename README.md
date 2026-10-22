@@ -19,7 +19,7 @@
 | [Project Roadmap](#project-roadmap--development-progress) | Completed, ongoing, and planned work |
 | [Project Documentation](#project-documentation) | Technical documentation and supporting resources |
 | [Screenshots and Evidence](screenshots/) | Lab screenshots and detection evidence |
-| [Lab Architecture](architecture/) | Infrastructure documentation under development |
+| [SOC Lab Architecture](#soc-lab-architecture) | Lab architecture diagram and infrastructure documentation |
 
 ### Security Monitoring • Detection Engineering • Threat Hunting • Incident Response
 
@@ -35,6 +35,14 @@ This project demonstrates practical cybersecurity engineering skills through the
 - Simulate adversary techniques mapped to MITRE ATT&CK.
 - Investigate alerts and document security incidents.
 - Implement additional security monitoring and response capabilities.
+
+## SOC Lab Architecture
+
+The diagram below illustrates my VMware-based SOC home lab, including Windows and Linux endpoint monitoring, centralized security event processing through Wazuh SIEM, Suricata IDS integration, and VirusTotal threat intelligence.
+
+![Enterprise SOC Lab Architecture](architecture/Enterprise-SOC-Lab-Architecture.jpeg)
+
+For detailed infrastructure information, security telemetry flow, and planned enhancements, see the [SOC Lab Architecture Documentation](architecture/README.md).
 
 ## Lab Environment
 
