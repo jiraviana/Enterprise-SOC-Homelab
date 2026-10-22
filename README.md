@@ -14,7 +14,7 @@
 | [Multi-Endpoint Monitoring](#multi-endpoint-monitoring) | Windows and Linux endpoint monitoring |
 | [Implemented Capabilities](#implemented-capabilities) | Configured SOC monitoring and detection features |
 | [Custom Detection Engineering](#custom-detection-engineering) | Custom Wazuh rules and validated detection evidence |
-| [MITRE ATT&CK Detection Portfolio](#mitre-attck-detection-engineering-portfolio) | Seven custom Wazuh detection case studies and validation results |
+| [MITRE ATT&CK Detection Portfolio](#mitre-attck-detection-engineering-portfolio) | Seven custom detection case studies and one validated built-in Wazuh detection |
 | [Detection Case Study — T1562.001](detection-rules/T1562.001-Defender-Impairment.md) | Microsoft Defender command-pattern detection |
 | [Project Roadmap](#project-roadmap--development-progress) | Completed, ongoing, and planned work |
 | [Project Documentation](#project-documentation) | Technical documentation and supporting resources |
@@ -116,7 +116,7 @@ As part of my ongoing Wazuh SOC Home Lab, I develop, test, and validate custom d
 
 ### MITRE ATT&CK Detection Engineering Portfolio
 
-Developed and documented seven custom Wazuh detection rules covering credential access, discovery, persistence, defense evasion, and command-based transfer activity.
+Developed and documented seven custom Wazuh detection rules and investigated one built-in Wazuh rule, covering credential access, discovery, persistence, defense evasion, and command-based transfer activity.
 
 Each case study includes detection logic, MITRE ATT&CK mapping, SOC investigation methodology, and available lab evidence.
 
@@ -129,7 +129,7 @@ Each case study includes detection logic, MITRE ATT&CK mapping, SOC investigatio
 | [T1053.005](detection-rules/T1053.005-Scheduled-Task-Persistence.md) | Scheduled Task Persistence | 100107 | Alert Observed |
 | [T1547.001](detection-rules/T1547.001-Registry-Run-Key-Persistence.md) | Registry Run Key Persistence | 100108 | Alert Generation Validated |
 | [T1562.001](detection-rules/T1562.001-Defender-Impairment.md) | Microsoft Defender Impairment Command Detection | 100109 | Command Pattern Detected |
-| [T1057](detection-rules/T1057-Process-Discovery.md) | PowerShell Process Discovery | 91815 | Alert Generation Validated |
+| [T1057](detection-rules/T1057-Process-Discovery.md) | PowerShell Process Discovery (Built-in Wazuh Rule) | 91815 | Alert Generation and Rule Logic Validated |
 
 **Detection Engineering Workflow:** Telemetry Collection → Rule Development → Attack Simulation → Alert Validation → SOC Investigation → Documentation
 
