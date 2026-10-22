@@ -4,6 +4,21 @@
 
 > This is an ongoing cybersecurity engineering project. Features, integrations, detection rules, attack simulations, and documentation are continuously being developed, tested, and improved. Completed implementations are documented with validation evidence, while upcoming capabilities are tracked in the project roadmap.
 
+## Project Navigation
+
+| Section | Description |
+|---|---|
+| [Project Objectives](#project-objectives) | Purpose and goals of the SOC lab |
+| [Lab Environment](#lab-environment) | Infrastructure and technologies used |
+| [Wazuh SIEM Dashboard](#wazuh-siem-dashboard) | SIEM deployment evidence |
+| [Multi-Endpoint Monitoring](#multi-endpoint-monitoring) | Windows and Linux endpoint monitoring |
+| [Custom Detection Engineering](#custom-detection-engineering) | Validated detection rules and evidence |
+| [MITRE ATT&CK Simulations](attack-simulations/README.md) | Controlled testing and simulation tracking |
+| [Detection Case Study — T1562.001](detection-rules/T1562.001-Defender-Impairment.md) | Microsoft Defender command-pattern detection |
+| [Project Roadmap](#project-roadmap) | Completed, ongoing, and planned work |
+| [Screenshots and Evidence](screenshots/README.md) | Supporting lab screenshots |
+| [Lab Architecture](architecture/README.md) | Infrastructure documentation |
+
 ### Security Monitoring • Detection Engineering • Threat Hunting • Incident Response
 
 A hands-on, enterprise-style Security Operations Center (SOC) home lab designed to simulate real-world security monitoring, threat detection, incident investigation, and response workflows.
