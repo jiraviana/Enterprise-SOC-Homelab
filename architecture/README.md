@@ -16,6 +16,25 @@ This home lab uses VMware Workstation Pro to support an enterprise-style securit
 | WIN11-ACER-LAB02 | Windows 11 | Additional registered endpoint; disconnected at the documented capture |
 | Virtualization | VMware Workstation Pro | Virtualized lab infrastructure |
 
+## Wazuh SIEM Architecture
+
+The SOC lab uses Wazuh SIEM 4.14.8, deployed on Ubuntu Server 24.04 LTS, with the following core components:
+
+| Component | Function |
+|---|---|
+| Wazuh Manager | Receives and analyzes endpoint security telemetry, processes events, and evaluates detection rules |
+| Wazuh Indexer | Stores and indexes security alerts for searching and analysis |
+| Wazuh Dashboard | Provides centralized security monitoring, alert investigation, and visualization |
+| Wazuh Agents | Collect configured Windows and Linux endpoint security telemetry |
+
+### Security Event Processing
+
+1. Endpoint activity generates security telemetry.
+2. Wazuh agents forward configured events to the Wazuh Manager.
+3. The Manager processes events using decoders and detection rules.
+4. Generated alerts are forwarded to the Wazuh Indexer.
+5. Security analysts review alerts through the Wazuh Dashboard.
+
 ## Security Monitoring and Data Flow
 
 1. Windows endpoints generate Windows Security, Sysmon, PowerShell, and Microsoft Defender events.
@@ -28,6 +47,10 @@ This home lab uses VMware Workstation Pro to support an enterprise-style securit
 
 The lab uses VMware NAT networking. Endpoint addresses, connectivity, and network details may change as the environment evolves.
 
+VMware NAT networking provides connectivity for the virtual machines through the host's virtual networking infrastructure.
+
+Suricata is deployed on Kali Linux to inspect traffic available to its configured network interface. Its visibility depends on the traffic routing and capture configuration; it does not automatically monitor all traffic across the VMware NAT network.
+
 ## Security Monitoring and Detection Capabilities
 
 - Windows Security Event Log monitoring
@@ -39,6 +62,14 @@ The lab uses VMware NAT networking. Endpoint addresses, connectivity, and networ
 - Suricata IDS alert ingestion
 - Custom Wazuh detection rules
 - MITRE ATT&CK-aligned detection validation
+
+For technical infrastructure details, see the [SOC Lab Architecture Documentation](architecture/README.md).
+
+### External Threat Intelligence
+
+VirusTotal is integrated with Wazuh to support file hash reputation checks during relevant security investigations.
+
+VirusTotal is an external threat intelligence service and is not hosted within the VMware lab environment.
 
 ## Planned Enhancements
 
