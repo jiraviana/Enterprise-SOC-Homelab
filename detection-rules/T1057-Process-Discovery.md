@@ -129,6 +129,14 @@ Wazuh Threat Hunting displayed PowerShell process discovery alerts from the `Win
 | Rule Type | Built-in Wazuh PowerShell rule |
 | Rule Chain | 91801 → 91802 → 91815 |
 
+### Windows Event ID 4104 Validation Evidence
+
+The Wazuh Threat Hunting dashboard confirmed that PowerShell process discovery alerts originated from Windows Event ID `4104` in the `Microsoft-Windows-PowerShell/Operational` channel.
+
+The captured evidence shows Wazuh Rule `91815`, MITRE ATT&CK T1057 mapping, the affected endpoint, and the associated PowerShell script-block commands.
+
+![MITRE T1057 PowerShell Event ID 4104 Validation](../screenshots/MITRE-T1057-PowerShell-EventID-4104-Validation.jpeg)
+
 ### Observed PowerShell Commands
 
 The following process enumeration commands appeared in the collected script-block telemetry:
