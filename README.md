@@ -171,55 +171,64 @@ Additional custom detection rules, MITRE ATT&CK simulations, correlation logic, 
 
 **Project Status:** 🚧 Ongoing Development | Active Build & Testing
 
-This project is continuously evolving into an enterprise-style SOC environment. The roadmap below tracks implemented capabilities, current engineering work, and planned integrations.
+This project is an evolving enterprise-style SOC home lab focused on SIEM engineering, endpoint monitoring, network intrusion detection, threat detection, and incident investigation.
 
-### Completed & Validated
+The roadmap distinguishes deployed capabilities from ongoing validation and future infrastructure enhancements.
 
-- [x] Deploy Wazuh SIEM 4.14.8 on Ubuntu Server 24.04 LTS
-- [x] Configure Wazuh Manager, Indexer, and Dashboard
-- [x] Deploy Windows 11 and Kali Linux Wazuh agents
-- [x] Configure Windows Security Event Log collection
-- [x] Implement File Integrity Monitoring (FIM)
-- [x] Integrate VirusTotal threat intelligence
-- [x] Collect Microsoft Defender security telemetry
-- [x] Validate EICAR antivirus test detection
-- [x] Develop and validate a custom Wazuh detection for MITRE ATT&CK T1562.001
-- [x] Document the first controlled detection test and alert evidence
-- [x] Deploy and configure Sysmon on Windows11-Lab
-- [x] Integrate Sysmon event telemetry into Wazuh
-- [x] Configure PowerShell Script Block Logging (Event ID 4104)
-- [x] Deploy Suricata IDS 8.0.7 on Kali Linux
-- [x] Integrate Suricata IDS alerts into Wazuh
-- [x] Validate custom Suricata TCP SYN detection and Wazuh alert ingestion
+### Completed & Implemented
 
-### In Progress
+- [x] Deploy Wazuh Manager, Indexer, and Dashboard
+- [x] Configure Windows and Kali Linux Wazuh agents
+- [x] Enable Windows Security Event Log monitoring
+- [x] Integrate Sysmon endpoint telemetry
+- [x] Enable PowerShell Script Block Logging
+- [x] Configure File Integrity Monitoring (FIM)
+- [x] Integrate Microsoft Defender telemetry
+- [x] Configure VirusTotal threat intelligence integration
+- [x] Perform EICAR antivirus detection testing
+- [x] Develop custom Wazuh detection rules
+- [x] Validate Windows authentication failure correlation
+- [x] Deploy Suricata IDS on Kali Linux
+- [x] Integrate Suricata EVE JSON alerts with Wazuh
+- [x] Test custom Suricata TCP SYN detection
+- [x] Document eight MITRE ATT&CK detection case studies
+- [x] Verify built-in Wazuh Rule 91815 for T1057 Process Discovery
 
-- [ ] Expand and validate additional custom Wazuh detection rules
-- [ ] Develop additional MITRE ATT&CK-aligned test scenarios
-- [ ] Improve detection documentation and evidence collection
+### In Progress — Detection Engineering & SOC Operations
 
-### Planned — Security Telemetry & Detection
+- [ ] Complete validation of pending custom detection rules
+- [ ] Improve rule tuning and false-positive handling
+- [ ] Expand MITRE ATT&CK-aligned attack simulations
+- [ ] Develop multi-event correlation use cases
+- [ ] Perform structured threat hunting investigations
+- [ ] Develop investigation reports and incident response playbooks
+- [ ] Expand Suricata network detection coverage
+- [ ] Improve endpoint and network telemetry correlation
 
-- [ ] Expand Sysmon event coverage and detection rules
-- [ ] Enhance PowerShell detection coverage
-- [ ] Develop multi-event correlation rules
-- [ ] Expand Suricata IDS detection scenarios and tuning
-- [ ] Perform structured threat hunting exercises
+### Planned — Enterprise SOC Expansion
 
-### Planned — Incident Response & Infrastructure
-
+- [ ] Deploy a dedicated Windows target VM
+- [ ] Build a Windows Server Active Directory environment
+- [ ] Integrate Active Directory security auditing with Wazuh
 - [ ] Implement and test Wazuh Active Response
-- [ ] Expand vulnerability detection and management workflows
-- [ ] Deploy a dedicated Windows target virtual machine
-- [ ] Build an Active Directory test environment
-- [ ] Simulate and investigate additional endpoint and identity-based attack scenarios
-- [ ] Create end-to-end incident investigation and response case studies
+- [ ] Expand vulnerability detection and management
+- [ ] Develop automated incident response workflows
+- [ ] Create SOC dashboards and operational reporting
+- [ ] Simulate multi-stage attack scenarios across lab endpoints
 
-### Continuous Improvement
+### Development Approach
 
-This roadmap is updated as each capability is configured, tested, and validated. Features are only marked complete after implementation and verification.
+Each new capability follows a structured engineering workflow:
 
-> **Portfolio Note:** This is an independent, hands-on cybersecurity engineering project conducted in an authorized home lab. It is not presented as a completed production SOC deployment.
+1. Deploy and configure the required component.
+2. Verify log collection and security telemetry.
+3. Develop or review the detection logic.
+4. Execute authorized lab validation tests.
+5. Investigate generated security events.
+6. Document results, screenshots, and limitations.
+7. Refine detection coverage and update the project roadmap.
+
+The environment is intended for continuous development rather than representing a fully deployed production SOC.
 
 ## Project Documentation
 
