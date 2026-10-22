@@ -1,13 +1,15 @@
 
 # MITRE ATT&CK T1057 — Process Discovery
 
-**Detection Status:** Alert Evidence Captured | Rule Details Pending Verification
+**Detection Status:** Alert Generation Validated | Rule Logic Review Pending
 
 ## 1. Overview
 
-This case study documents process discovery activity observed through PowerShell telemetry and Wazuh SIEM in my Enterprise SOC Home Lab.
+This case study documents the detection and investigation of PowerShell-based process discovery activity using Wazuh SIEM in my Enterprise SOC Home Lab.
 
-The objective is to investigate PowerShell commands associated with process enumeration and evaluate how the resulting security telemetry can support detection engineering and SOC investigations.
+The objective is to identify process enumeration commands, examine the associated Windows security telemetry, and validate alert generation mapped to MITRE ATT&CK T1057 — Process Discovery.
+
+Process discovery can be used by adversaries to identify running applications, security tools, and other software. However, the same activity is common during legitimate system administration and troubleshooting, making contextual investigation essential.
 
 ## 2. MITRE ATT&CK Mapping
 
@@ -16,71 +18,103 @@ The objective is to investigate PowerShell commands associated with process enum
 | Tactic | Discovery |
 | Technique | T1057 — Process Discovery |
 | Platform | Windows |
-| Telemetry | PowerShell logging |
+| Telemetry Source | PowerShell Operational Logs |
 | SIEM | Wazuh |
-| Detection Focus | PowerShell-based process discovery activity |
+| Detection Focus | PowerShell-based process enumeration |
 
-Process discovery allows a user or attacker to enumerate running processes and identify applications, security tools, and other active software.
-
-Because process enumeration also occurs during legitimate administration and troubleshooting, the surrounding context must be evaluated before determining whether activity is suspicious.
-
-## 3. Detection Objective
-
-Identify PowerShell activity associated with process enumeration and make the resulting telemetry available for investigation in Wazuh.
-
-The investigation focuses on:
-
-- PowerShell command content
-- User and endpoint context
-- Event timestamps
-- Available parent process or execution context
-- Related security alerts
-- Potentially suspicious follow-on activity
-
-## 4. Detection Evidence
+## 3. Detection Evidence
 
 ### Wazuh Detection Evidence
+
+The Wazuh Threat Hunting dashboard displayed alerts associated with PowerShell process discovery activity on the monitored Windows endpoint.
 
 ![MITRE T1057 PowerShell Process Discovery](../screenshots/MITRE-T1057-PowerShell-Process-Discovery-Wazuh.jpeg)
 
 ### Additional Investigation Evidence
 
+Additional captured evidence supports the review of PowerShell process discovery activity and its associated Wazuh alerts.
+
 ![MITRE T1057 Full Detection Evidence](../screenshots/MITRE-T1057-PowerShell-Detection-Full-Evidence.jpeg)
 
-## 5. SOC Investigation Workflow
+## 4. SOC Investigation Workflow
 
-1. Identify the PowerShell activity associated with the alert.
-2. Review the command or script-block content.
-3. Identify the affected endpoint and user account.
-4. Check the event timestamp and related activity.
-5. Determine whether the command is consistent with authorized administration or controlled lab testing.
-6. Correlate the activity with other available endpoint telemetry.
-7. Document the investigation findings and any required response actions.
+The investigation workflow covers the following activities:
 
-## 6. Detection Validation
+1. Identify the PowerShell process discovery alert in Wazuh Threat Hunting.
+2. Review the detection rule, MITRE ATT&CK mapping, and alert details.
+3. Examine the PowerShell script-block content.
+4. Identify the affected endpoint and available user context.
+5. Review timestamps, repeated events, and related activity.
+6. Assess whether the commands are consistent with authorized administration or controlled testing.
+7. Correlate with additional endpoint telemetry where available.
+8. Document the findings and validation limitations.
 
-The screenshots provide supporting evidence for the PowerShell process discovery investigation.
+## 5. Detection Validation Results
 
-The following details require confirmation against the underlying Wazuh alert and detection rule before the case study can be marked fully validated:
+Wazuh Threat Hunting displayed PowerShell process discovery alerts from the `Windows11-Lab` endpoint on October 19, 2026.
 
-- Exact Wazuh rule ID and severity
-- Exact PowerShell command or expression detected
-- Source Windows Event ID
-- Whether the alert originated from a custom rule or an existing Wazuh rule
-- Reproducibility of the detection during a controlled test
+### Observed Alert Details
 
-An alert associated with process discovery does not independently establish malicious activity or compromise.
+| Field | Observed Value |
+|---|---|
+| MITRE ATT&CK Technique | T1057 — Process Discovery |
+| Wazuh Rule ID | 91815 |
+| Rule Description | PowerShell executing process discovery |
+| Endpoint | Windows11-Lab |
+| Log Channel | Microsoft-Windows-PowerShell/Operational |
+| Detection Date | October 19, 2026 |
+| Dashboard Search Results | 20 matching alert records |
+| Validation Status | Alert Generation Validated |
 
-## 7. Future Improvements
+### Observed PowerShell Commands
 
-- Verify and document the exact detection rule.
-- Reproduce the detection through controlled testing.
-- Add relevant alert fields and detection logic.
-- Tune the rule to distinguish routine administrative activity from potentially suspicious process discovery.
-- Correlate PowerShell events with Sysmon process creation telemetry where available.
+The following process enumeration commands appeared in the collected script-block telemetry:
+
+```powershell
+Get-Process -Name powershell
+```
+
+Enumerates running PowerShell processes.
+
+```powershell
+Get-Process | Select-Object -First 5 Name, Id
+```
+
+Retrieves process names and IDs for the first five returned processes.
+
+### Investigation Findings
+
+The observed events demonstrate that Wazuh generated alerts for PowerShell process enumeration activity and associated them with MITRE ATT&CK T1057.
+
+The dashboard returned 20 matching alert records during the selected search period. These records do not necessarily represent 20 distinct command executions.
+
+**Validation Result: Alert Generation Validated**
+
+The evidence supports detection of the observed commands and centralized visibility through Wazuh Threat Hunting.
+
+### Validation Limitations
+
+The following technical details remain pending verification:
+
+- Exact detection conditions of Wazuh Rule `91815`
+- Whether the rule is built-in or custom
+- Rule severity level
+- Underlying Windows Event ID
+- Reproducibility through a separately documented controlled test
+
+The observed commands are not, by themselves, evidence of malicious activity or successful compromise.
+
+## 6. Future Improvements
+
+- Inspect the definition of Wazuh Rule `91815` and document its detection conditions.
+- Confirm the source Windows Event ID and rule severity.
+- Perform a controlled test to verify reproducibility.
+- Correlate PowerShell events with Sysmon process creation telemetry.
+- Evaluate additional process discovery commands and potential detection gaps.
+- Improve contextual analysis to distinguish legitimate administration from suspicious reconnaissance.
 
 ## Conclusion
 
-This case study documents the investigation of PowerShell-based process discovery activity using Wazuh SIEM.
+This case study demonstrates Wazuh SIEM visibility into PowerShell-based process discovery activity on a monitored Windows endpoint.
 
-Further validation of the underlying detection logic and alert fields will strengthen the evidence and support a more complete MITRE ATT&CK-aligned detection engineering case study.
+Alert generation and MITRE ATT&CK T1057 mapping were confirmed through the collected evidence. Further rule-level verification and controlled testing will strengthen the detection engineering assessment.
