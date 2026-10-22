@@ -21,7 +21,7 @@
 | [Screenshots and Evidence](screenshots/) | Lab screenshots and detection evidence |
 | [SOC Lab Architecture](#soc-lab-architecture) | Lab architecture diagram and infrastructure documentation |
 | [Security Monitoring and Integrations](security-monitoring/README.md) | Windows Event Logs, Sysmon, Defender, FIM, VirusTotal, and Wazuh service evidence |
-
+| [Suricata IDS — Network Detection](suricata-ids/README.md) | Suricata deployment, custom TCP SYN detection, Wazuh integration, and investigation evidence |
 
 ### Security Monitoring • Detection Engineering • Threat Hunting • Incident Response
 
@@ -235,7 +235,7 @@ workflows will be added as development progresses.
 - [Screenshots and Evidence](screenshots/)
 - [SOC Lab Architecture Documentation](architecture/README.md)
 - [Security Monitoring and Integrations](security-monitoring/README.md)
-
+- [Suricata IDS — Network Detection and Investigation](suricata-ids/README.md)
   
 ## Disclaimer
 
