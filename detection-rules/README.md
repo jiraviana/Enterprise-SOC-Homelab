@@ -32,7 +32,7 @@ The following custom Wazuh detection rules have generated alerts in my SOC home 
 | Rule ID | MITRE ATT&CK | Detection Use Case | Status |
 |---|---|---|---|
 | 100102 | T1110 | Multiple Failed Authentication Attempts | Alert Observed |
-| 100103 | T1082 | System Information Discovery | Alert Observed |
+| 100103 | T1082 | System Information Discovery | Documented |
 | 100104 | T1016 | Network Configuration Discovery | Alert Observed |
 | 100106 | T1105 | Ingress Tool Transfer | Alert Observed |
 | 100107 | T1053.005 | Scheduled Task Persistence | Alert Observed |
@@ -42,6 +42,7 @@ The following custom Wazuh detection rules have generated alerts in my SOC home 
 ### Published Detection Case Studies
 
 - [T1562.001 — Microsoft Defender Impairment Detection](T1562.001-Defender-Impairment.md)
+- [T1082 — System Information Discovery Detection](T1082-System-Information-Discovery.md)
 
 ### Detection Documentation Approach
 
