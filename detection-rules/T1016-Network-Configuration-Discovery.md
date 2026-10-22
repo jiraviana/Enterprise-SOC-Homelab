@@ -18,7 +18,7 @@ The detection is mapped to MITRE ATT&CK T1016 — System Network Configuration D
 | Endpoint | Windows11-Lab |
 | Target Process | ipconfig.exe |
 | Current Rule Condition | ipconfig.exe with /all argument |
-| Evidence Status | Historical alert observed; current rule validation pending |
+| Evidence Status | Validated — Custom rule 100104 successfully detected ipconfig.exe /all using Sysmon Event ID 1 |
 
 ## Current Custom Wazuh Rule
 
@@ -76,8 +76,43 @@ When reviewing network configuration discovery alerts, I would:
 - Legitimate network troubleshooting can trigger discovery detections.
 - The current rule specifically requires `ipconfig.exe /all`.
 - The historical alert does not validate the current rule condition.
-- Further testing is needed to confirm current detection behavior.
+- Alert generation is confirmed; exact command-line matching and false-positive behavior require further validation.
 
-## Next Validation
+## Current Detection Validation — October 22, 2026
 
-Execute `ipconfig.exe /all` on an endpoint with active Sysmon and Wazuh monitoring, then verify that rule 100104 generates a corresponding alert.
+**Validation Status:** Alert Generation Validated
+
+Custom Wazuh Rule 100104 successfully generated multiple security alerts associated with Windows network configuration discovery on the Windows11-Lab endpoint.
+
+### Observed Detection Details
+
+| Field | Observed Result |
+|---|---|
+| Wazuh Rule ID | 100104 |
+| Rule Severity | Level 8 (configured) |
+| MITRE ATT&CK | T1016 — System Network Configuration Discovery |
+| Endpoint | Windows11-Lab |
+| Log Source | Microsoft-Windows-Sysmon/Operational |
+| Observed Process | `C:\Windows\System32\ipconfig.exe` |
+| Detection Description | Windows Network Configuration Discovery - ipconfig /all executed |
+| Evidence Dates | October 21–22, 2026 |
+
+### Detection Evidence
+
+![T1016 Network Configuration Discovery Validation](../screenshots/MITRE-T1016-Network-Configuration-Discovery-Validated.jpeg)
+
+### Validation Assessment
+
+The screenshot confirms that Wazuh generated multiple alerts under custom Rule 100104, associated with MITRE ATT&CK T1016.
+
+The available screenshot does not display the complete process command-line field. Therefore, exact argument matching and false-positive behavior require additional field-level review.
+
+The observed events demonstrate alert generation, but do not independently establish malicious activity or compromise.
+
+### Further Validation and Tuning
+
+- Review the complete Sysmon Event ID 1 command-line fields.
+- Confirm matching behavior for `ipconfig.exe /all`.
+- Perform negative testing using commands such as `ipconfig.exe /flushdns`.
+- Evaluate legitimate administrative activity and potential false positives.
+
