@@ -30,13 +30,13 @@ The following inventory documents custom Wazuh detection rules developed and tes
 
 | Rule ID | MITRE ATT&CK | Detection Use Case | Status |
 |---|---|---|---|
-| 100102 | T1110 | Multiple Failed Authentication Attempts | Documented — Correlation Validated |
-| 100103 | T1082 | System Information Discovery | Documented |
-| 100104 | T1016 | Network Configuration Discovery | Documented — Current Rule Validation Pending |
-| 100106 | T1105 | Ingress Tool Transfer | Documented — Command Pattern Validated |
-| 100107 | T1053.005 | Scheduled Task Persistence | Documented — Alert Observed |
-| 100108 | T1547.001 | Registry Run Key Persistence | Documented — Alert Generation Validated |
-| 100109 | T1562.001 | Microsoft Defender Tampering Command Pattern | Documented |
+| 100102 | [T1110](T1110-Brute-Force-Detection.md) | Multiple Failed Authentication Attempts | Documented — Correlation Validated |
+| 100103 | [T1082](T1082-System-Information-Discovery.md) | System Information Discovery | Documented — Detection Validated |
+| 100104 | [T1016](T1016-Network-Configuration-Discovery.md) | Network Configuration Discovery | Documented — Current Rule Validation Pending |
+| 100106 | [T1105](T1105-Ingress-Tool-Transfer.md) | Ingress Tool Transfer | Documented — Command Pattern Validated |
+| 100107 | [T1053.005](T1053.005-Scheduled-Task-Persistence.md) | Scheduled Task Persistence | Documented — Alert Observed |
+| 100108 | [T1547.001](T1547.001-Registry-Run-Key-Persistence.md) | Registry Run Key Persistence | Documented — Alert Generation Validated |
+| 100109 | [T1562.001](T1562.001-Defender-Impairment.md) | Microsoft Defender Tampering Command Pattern | Documented — Command Pattern Detected |
 | 91815 | [T1057](T1057-Process-Discovery.md) | PowerShell Process Discovery (Built-in Wazuh Rule) | Documented — Alert Generation and Rule Logic Validated |
 
 ### Published Detection Case Studies
