@@ -28,7 +28,7 @@ This home lab uses VMware Workstation Pro to support an enterprise-style securit
 
 The lab uses VMware NAT networking. Endpoint addresses, connectivity, and network details may change as the environment evolves.
 
-## Detection Capabilities
+## Security Monitoring and Detection Capabilities
 
 - Windows Security Event Log monitoring
 - Sysmon telemetry collection
