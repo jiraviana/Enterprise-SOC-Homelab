@@ -84,13 +84,29 @@ The rule uses a case-insensitive regular expression to identify the `Get-Process
 
 The rule depends on parent rule `91802`, which should be evaluated separately when documenting the complete event-matching chain.
 
+### Detection Rule Chain Analysis
+
+Wazuh Rule `91815` is part of the built-in PowerShell detection ruleset and depends on parent Rules `91802` and `91801`.
+
+| Rule ID | Level | Detection Condition |
+|---|---|---|
+| 91801 | 0 | Identifies events from the PowerShell Operational channel after upstream Windows rules 60000 or 60010 |
+| 91802 | 0 | Requires a nonempty `win.eventdata.ScriptBlockId` |
+| 91815 | 4 | Matches the case-insensitive `Get-Process` pattern in `win.eventdata.scriptBlockText` |
+
+Rules `91801` and `91802` are intermediate grouping rules configured at Level 0.
+
+Rule `91815` evaluates the PowerShell script-block content and generates a Level 4 alert mapped to MITRE ATT&CK T1057 — Process Discovery.
+
+The complete rule chain has been verified against the installed Wazuh ruleset. The source Windows Event ID remains pending verification.
+
 ### Detection Considerations
 
-This is a built-in Wazuh detection rule rather than a custom detection developed specifically for this lab.
+Rule `91815` is a built-in Wazuh detection rule, not a custom rule developed for this lab.
 
-The expression matches the `Get-Process` string and does not independently determine whether the command is malicious.
+Its case-insensitive expression matches the `Get-Process` string in PowerShell script-block telemetry without determining whether the activity is malicious.
 
-Legitimate administration and troubleshooting may therefore generate matching alerts.
+Legitimate administration and troubleshooting may therefore trigger the rule, requiring additional investigation to distinguish expected activity from potentially suspicious process discovery.
 
 ## 6. Detection Validation Results
 
