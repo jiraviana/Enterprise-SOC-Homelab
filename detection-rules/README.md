@@ -36,7 +36,7 @@ The following custom Wazuh detection rules have generated alerts in my SOC home 
 | 100104 | T1016 | Network Configuration Discovery | Documented — Current Rule Validation Pending |
 | 100106 | T1105 | Ingress Tool Transfer | Documented — Command Pattern Validated |
 | 100107 | T1053.005 | Scheduled Task Persistence | Documented — Alert Observed |
-| 100108 | T1547.001 | Registry Run Key Persistence | Alert Observed |
+| 100108 | T1547.001 | Registry Run Key Persistence | Documented — Rule Match Validation Pending |
 | 100109 | T1562.001 | Microsoft Defender Tampering Command Pattern | Documented |
 
 ### Published Detection Case Studies
@@ -47,6 +47,8 @@ The following custom Wazuh detection rules have generated alerts in my SOC home 
 - [T1110 — Brute Force Detection and Event Correlation](T1110-Brute-Force-Detection.md)
 - [T1105 — Ingress Tool Transfer Detection](T1105-Ingress-Tool-Transfer.md)
 - [T1053.005 — Scheduled Task Persistence Detection](T1053.005-Scheduled-Task-Persistence.md)
+- [T1547.001 — Registry Run Key Persistence Detection](T1547.001-Registry-Run-Key-Persistence.md)
+
 
 ### Detection Documentation Approach
 
