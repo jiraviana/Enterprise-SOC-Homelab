@@ -160,7 +160,7 @@ The controlled test successfully generated a Level 12 security alert mapped to M
 
 ### Detailed Detection Engineering Documentation
 
-**[View Full MITRE T1562.001 Detection Case Study](detection-rules/T1562.001-Defender-Impairment.md)**
+[View Full MITRE T1562.001 Detection Case Study](detection-rules/T1562.001-Defender-Impairment.md)
 
 ### Ongoing Detection Engineering
 
