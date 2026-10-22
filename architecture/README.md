@@ -49,6 +49,8 @@ The lab uses VMware NAT networking. Endpoint addresses, connectivity, and networ
 
 ## Architecture Diagram
 
-Architecture diagram will be added as an image.
+The following diagram illustrates the deployed Wazuh SOC lab infrastructure, monitored endpoints, security telemetry flow, and planned enhancements.
+
+![Enterprise SOC Home Lab Architecture](Enterprise-SOC-Lab-Architecture.jpeg)
 
 **Note:** This is an authorized home lab for defensive security research and professional portfolio development. It is not a production SOC deployment.
