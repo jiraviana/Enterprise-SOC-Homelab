@@ -49,6 +49,4 @@ The lab uses VMware NAT networking. Endpoint addresses, connectivity, and networ
 
 ## Architecture Diagram
 
-An architecture diagram will be added after the deployed components and communication paths are verified.
-
 **Note:** This is an authorized home lab for defensive security research and professional portfolio development. It is not a production SOC deployment.
