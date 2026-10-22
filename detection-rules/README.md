@@ -24,9 +24,9 @@ Detection: PowerShell command pattern associated with disabling Microsoft Defend
 
 Status: Tested in lab environment.
 
-## Custom Detection Inventory
+## Detection Rules and Validation Inventory
 
-The following custom Wazuh detection rules have generated alerts in my SOC home lab. Additional validation and investigation documentation is ongoing.
+The following inventory documents custom Wazuh detection rules developed and tested in my SOC home lab, alongside built-in Wazuh rules investigated and validated through endpoint telemetry. Validation statuses reflect the available detection evidence, with additional testing and tuning ongoing.
 
 | Rule ID | MITRE ATT&CK | Detection Use Case | Status |
 |---|---|---|---|
@@ -48,7 +48,7 @@ The following custom Wazuh detection rules have generated alerts in my SOC home 
 - [T1105 — Ingress Tool Transfer Detection](T1105-Ingress-Tool-Transfer.md)
 - [T1053.005 — Scheduled Task Persistence Detection](T1053.005-Scheduled-Task-Persistence.md)
 - [T1547.001 — Registry Run Key Persistence Detection](T1547.001-Registry-Run-Key-Persistence.md)
-
+- [T1057 — PowerShell Process Discovery Detection](T1057-Process-Discovery.md)
 
 ### Detection Documentation Approach
 
