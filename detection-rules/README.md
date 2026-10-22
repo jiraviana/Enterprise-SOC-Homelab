@@ -24,6 +24,38 @@ Detection: PowerShell command pattern associated with disabling Microsoft Defend
 
 Status: Tested in lab environment.
 
+
+## Custom Detection Inventory
+
+The following custom Wazuh detection rules have generated alerts in my SOC home lab. Additional validation and investigation documentation is ongoing.
+
+| Rule ID | MITRE ATT&CK | Detection Use Case | Status |
+|---|---|---|---|
+| 100102 | T1110 | Multiple Failed Authentication Attempts | Alert Observed |
+| 100103 | T1082 | System Information Discovery | Alert Observed |
+| 100104 | T1016 | Network Configuration Discovery | Alert Observed |
+| 100106 | T1105 | Ingress Tool Transfer | Alert Observed |
+| 100107 | T1053.005 | Scheduled Task Persistence | Alert Observed |
+| 100108 | T1547.001 | Registry Run Key Persistence | Alert Observed |
+| 100109 | T1562.001 | Microsoft Defender Tampering Command Pattern | Documented |
+
+### Published Detection Case Studies
+
+- [T1562.001 — Microsoft Defender Impairment Detection](T1562.001-Defender-Impairment.md)
+
+### Detection Documentation Approach
+
+Each detection case study will include:
+
+- Detection objective and MITRE ATT&CK mapping
+- Log source and relevant Windows Event ID
+- Custom Wazuh rule configuration
+- Controlled simulation or observed event
+- Alert evidence and investigation findings
+- Detection limitations and improvements
+
+> Detection alerts indicate matched rule conditions and do not automatically confirm malicious activity.
+
 ## Future Documentation
 
 Individual detection rules, test cases, sample alerts, and validation evidence will be added as development continues.
