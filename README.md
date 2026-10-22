@@ -104,6 +104,9 @@ centralized security monitoring.
 - EICAR antivirus detection testing
 - Custom Wazuh detection rules
 - MITRE ATT&CK-aligned detection testing
+- Sysmon endpoint telemetry integration
+- PowerShell Script Block Logging (Event ID 4104)
+- Suricata IDS integration and custom TCP SYN detection
 
 ## Custom Detection Engineering
 
@@ -157,6 +160,12 @@ This project is continuously evolving into an enterprise-style SOC environment. 
 - [x] Validate EICAR antivirus test detection
 - [x] Develop and validate a custom Wazuh detection for MITRE ATT&CK T1562.001
 - [x] Document the first controlled detection test and alert evidence
+- [x] Deploy and configure Sysmon on Windows11-Lab
+- [x] Integrate Sysmon event telemetry into Wazuh
+- [x] Configure PowerShell Script Block Logging (Event ID 4104)
+- [x] Deploy Suricata IDS 8.0.7 on Kali Linux
+- [x] Integrate Suricata IDS alerts into Wazuh
+- [x] Validate custom Suricata TCP SYN detection and Wazuh alert ingestion
 
 ### In Progress
 
@@ -166,10 +175,10 @@ This project is continuously evolving into an enterprise-style SOC environment. 
 
 ### Planned — Security Telemetry & Detection
 
-- [ ] Deploy and configure Sysmon
-- [ ] Enhance PowerShell logging and detection coverage
+- [ ] Expand Sysmon event coverage and detection rules
+- [ ] Enhance PowerShell detection coverage
 - [ ] Develop multi-event correlation rules
-- [ ] Integrate Suricata network intrusion detection
+- [ ] Expand Suricata IDS detection scenarios and tuning
 - [ ] Perform structured threat hunting exercises
 
 ### Planned — Incident Response & Infrastructure
