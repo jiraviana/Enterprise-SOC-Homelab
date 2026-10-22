@@ -46,11 +46,27 @@ When the configured frequency condition is satisfied, Wazuh can generate a Level
 
 The rule does not explicitly correlate by source IP address or target username.
 
+
 ## Detection Evidence
 
-A Wazuh alert associated with rule 100102 was previously observed during lab testing.
+### Evidence 1 — Wazuh Brute Force Detection
 
-The evidence will be linked after verifying the exact screenshot filename.
+The Wazuh dashboard shows custom rule 100102 identifying repeated Windows authentication failures on Windows11-Lab. Related events include failed logons (Event ID 4625) and an account lockout (Event ID 4740).
+
+![T1110 Brute Force Detection](../screenshots/MITRE-T1110-Brute-Force-Detection.jpeg)
+
+### Evidence 2 — Authentication Correlation
+
+The supporting evidence shows repeated authentication failure alerts matching Wazuh rule 60122, an account lockout alert under rule 60115, and the custom correlation alert under rule 100102.
+
+![T1110 Brute Force Correlation Evidence](../screenshots/MITRE-T1110-Brute-Force-Correlation-Evidence.jpeg)
+
+### Investigation Findings
+
+- Multiple failed Windows authentication events were observed.
+- Wazuh generated the custom correlation alert under rule 100102.
+- A related account lockout event was observed.
+- The evidence demonstrates detection of repeated authentication failures, not a confirmed account compromise.
 
 ## SOC Investigation Approach
 
