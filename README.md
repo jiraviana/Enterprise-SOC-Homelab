@@ -112,6 +112,28 @@ centralized security monitoring.
 
 As part of my ongoing Wazuh SOC Home Lab, I develop, test, and validate custom detection rules to identify suspicious endpoint activity and map relevant behaviors to the MITRE ATT&CK framework.
 
+### MITRE ATT&CK Detection Engineering Portfolio
+
+Developed and documented seven custom Wazuh detection rules covering credential access, discovery, persistence, defense evasion, and command-based transfer activity.
+
+Each case study includes detection logic, MITRE ATT&CK mapping, SOC investigation methodology, and available lab evidence.
+
+| MITRE ATT&CK | Detection Use Case | Wazuh Rule | Validation Status |
+|---|---|---|---|
+| [T1110](detection-rules/T1110-Brute-Force-Detection.md) | Brute Force Detection and Correlation | 100102 | Correlation Validated |
+| [T1082](detection-rules/T1082-System-Information-Discovery.md) | System Information Discovery | 100103 | Detection Validated |
+| [T1016](detection-rules/T1016-Network-Configuration-Discovery.md) | Network Configuration Discovery | 100104 | Current Rule Validation Pending |
+| [T1105](detection-rules/T1105-Ingress-Tool-Transfer.md) | Ingress Tool Transfer Command Detection | 100106 | Command Pattern Validated |
+| [T1053.005](detection-rules/T1053.005-Scheduled-Task-Persistence.md) | Scheduled Task Persistence | 100107 | Alert Observed |
+| [T1547.001](detection-rules/T1547.001-Registry-Run-Key-Persistence.md) | Registry Run Key Persistence | 100108 | Alert Generation Validated |
+| [T1562.001](detection-rules/T1562.001-Defender-Impairment.md) | Microsoft Defender Impairment Command Detection | 100109 | Command Pattern Detected |
+
+**Detection Engineering Workflow:** Telemetry Collection → Rule Development → Attack Simulation → Alert Validation → SOC Investigation → Documentation
+
+> **Note:** Detection of a suspicious command or configuration change does not independently establish successful exploitation, persistence, or compromise. All simulations were performed in an authorized home lab.
+
+[Explore All Detection Engineering Case Studies](detection-rules/README.md)
+
 ### Detection Case Study 01 — Microsoft Defender Tampering
 
 | Field | Details |
