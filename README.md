@@ -129,8 +129,7 @@ Each case study includes detection logic, MITRE ATT&CK mapping, SOC investigatio
 | [T1053.005](detection-rules/T1053.005-Scheduled-Task-Persistence.md) | Scheduled Task Persistence | 100107 | Alert Observed |
 | [T1547.001](detection-rules/T1547.001-Registry-Run-Key-Persistence.md) | Registry Run Key Persistence | 100108 | Alert Generation Validated |
 | [T1562.001](detection-rules/T1562.001-Defender-Impairment.md) | Microsoft Defender Impairment Command Detection | 100109 | Command Pattern Detected |
-| T1057 | Process Discovery | PowerShell process enumeration monitoring | Alert evidence captured; rule validation pending | [View Case Study](detection-rules/T1057-Process-Discovery.md) |
-
+| [T1057](detection-rules/T1057-Process-Discovery.md) | PowerShell Process Discovery | Pending Verification | Alert Evidence Captured — Rule Validation Pending |
 
 **Detection Engineering Workflow:** Telemetry Collection → Rule Development → Attack Simulation → Alert Validation → SOC Investigation → Documentation
 
