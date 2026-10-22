@@ -105,24 +105,6 @@ centralized security monitoring.
 - Custom Wazuh detection rules
 - MITRE ATT&CK-aligned detection testing
 
-## Detection Engineering
-
-Custom Wazuh rules are being developed and tested to identify suspicious endpoint activities.
-
-### Example: MITRE ATT&CK T1562.001
-
-**Technique:** Impair Defenses — Disable or Modify Tools
-
-**Detection objective:** Identify PowerShell commands associated with attempts to disable Microsoft Defender real-time protection.
-
-**Detection evidence:**
-- Endpoint: Windows11-Lab
-- Custom Rule ID: 100109
-- Alert Severity: Level 12
-- Detection Source: PowerShell command telemetry
-
-The custom detection was validated using a controlled test string in the lab environment.
-
 ## Project Roadmap & Development Progress
 
 **Project Status:** 🚧 Ongoing Development | Active Build & Testing
