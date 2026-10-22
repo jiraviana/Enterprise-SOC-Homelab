@@ -63,7 +63,7 @@ Suricata is deployed on Kali Linux to inspect traffic available to its configure
 - Custom Wazuh detection rules
 - MITRE ATT&CK-aligned detection validation
 
-For technical infrastructure details, see the [SOC Lab Architecture Documentation](architecture/README.md).
+For technical infrastructure details, see the [Back to Main Project README](../README.md).
 
 ### External Threat Intelligence
 
