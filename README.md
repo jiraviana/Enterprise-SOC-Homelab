@@ -32,6 +32,24 @@ This project demonstrates practical cybersecurity engineering skills through the
 | Threat Intelligence | VirusTotal |
 | Attack Framework | MITRE ATT&CK |
 
+## Wazuh SIEM Dashboard
+
+The screenshot below shows my deployed Wazuh SIEM
+environment during active lab testing.
+
+![Wazuh SOC Lab Dashboard](screenshots/01-wazuh-dashboard.png)
+
+**Dashboard observations:**
+- Centralized security monitoring through Wazuh
+- Active endpoint agents reporting to the SIEM
+- Security alerts across multiple severity levels
+- Ongoing endpoint monitoring and detection testing
+
+**Project Status:** Ongoing development and testing.
+
+> Note: Agent connectivity and alert counts reflect
+> the environment at the time of capture.
+
 ## Implemented Capabilities
 
 - Wazuh Manager, Indexer, and Dashboard deployment
